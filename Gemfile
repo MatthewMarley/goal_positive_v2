@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -27,12 +25,31 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Bootstrap for Sass gem, used for front-end UI and layout
+gem 'bootstrap-sass', '~> 3.3.7'
+
+# Use FontAwesome Sass gem for adding icons
+gem 'font-awesome-sass', '~> 4.7.0'
+
+# Use Hirb gem for 
+gem 'hirb', '~> 0.7.3'
+
+# Use Devise gem for Authentication solutions
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  # Use the PostgreSQL gem for Heroku production servers
+  gem 'pg', '0.18.4'
 end
 
 group :development do
