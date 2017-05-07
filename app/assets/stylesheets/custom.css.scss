@@ -1,2 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-default {
+    background-color: black;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.align-button-left {
+    text-align: left;
+}
