@@ -1,0 +1,14 @@
+<!-- chains_path is the url the form should be submitted to -->
+<%= form_for @chain, url: chains_path do |f| %>
+    <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class:'form-control', placeholder: "Enter name of new chain" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :pledge %>
+        <%= f.text_area :pledge, class: 'form-control', placeholder: "Description" %>
+    </div>
+    <div class="form-group">
+        <%= f.submit "Create Chain", class: 'btn btn-primary' %>
+    </div>
+<% end %>

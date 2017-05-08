@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
               length: { maximum: 105 },
               format: { with: VALID_EMAIL_REGEX }
     has_secure_password
+    # dependent: :destroy means when the user is deleted, so will all of their chains
+    has_many :chains, dependent: :destroy
 end

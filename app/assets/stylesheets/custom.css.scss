@@ -1,8 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .navbar-default {
-    background-color: black;
+    background-color: #000066;
 }
 
 .form-horizontal .control-label {
@@ -13,4 +15,13 @@
 
 .align-button-left {
     text-align: left;
+}
+
+.navbar-default .navbar-brand, 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    &:hover {
+        color: white;
+        opacity: 0.65;
+    }
 }
