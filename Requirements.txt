@@ -1,2 +1,35 @@
-Users Table
-    - 
+What do I actually want to create?
+ - Create a chain-system for goals where you are giving something up (e.g. smoking, alcohol, etc),
+ or taking up a new daily task (e.g. Go running, play guitar,etc)
+    - Index - Shows all chains for everyone (regardless of category), (Using pagination). Can filter by category
+        - New - Create a new chain with the following categories
+            - Name of Chain (e.g. Go Running, Play Guitar, Cold Shower, NoFap, Programming)
+            - User_id - Foreign Key
+            - Category_id - Foreign Key
+            - Pledge
+        - Edit - (for: Name of chain, pledge)
+        - Show - Show individual Chain (along with comments)
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ - Other goals can have a time-limit e.g.
+    - Daily Goals
+    - Weekly Goals
+    - Monthly Goals
+    - Yearly Goals
+    - 3 Year Goals
+    - 5 Year Goals
+    - 10 Year Goals
+    - Lifetime Goals
