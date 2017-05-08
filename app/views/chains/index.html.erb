@@ -1,13 +1,15 @@
 <h1 align="center">All Chains</h1>
 
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <% @chains.each do |chain| %>
-        <div class="well">
-            <strong><%= chain.user.username %></strong>
-            <%= chain.name %>
-            </br>
-            <small><%= chain.pledge %></small>
+    <% @chains.each do |chain| %>
+        <div class="col-md-1 text-center">
+            <div class="well">
+                <strong><%= chain.user.username %></strong>
+                </br>
+                <%= chain.name %>
+                </br>
+                <small><%= chain.pledge %></small>
+            </div>
         </div>
         <% end %>
     </div>

@@ -13,6 +13,7 @@ What do I actually want to create?
         
     - For these chains I will set up a trophy system where you get bronze at 10 days, sliver at 20, etc.
     - Maybe you unlock different chains when you get to a certain day?
+    - In the Users/show page, the pledge should only come up when hovering over the goal
  
  
  

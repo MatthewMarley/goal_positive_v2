@@ -17,11 +17,14 @@
     text-align: left;
 }
 
-.navbar-default .navbar-brand, 
 .navbar-default .navbar-nav > li > a {
     color: white;
     &:hover {
         color: white;
         opacity: 0.65;
     }
+}
+
+.navbar-default .navbar-brand{
+    color: gold;
 }

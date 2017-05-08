@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     
     def index
-        
+        @users = User.all
     end
     
     def new
@@ -11,7 +11,8 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            #session[:user_id] = @user.id
+            # This automatically logs the user in on signup
+            session[:user_id] = @user.id
             flash[:success] = "Welcome to Goal Positive #{@user.username}"
             redirect_to root_path
         else
@@ -28,7 +29,8 @@ class UsersController < ApplicationController
     end
     
     def show
-        
+        @user = User.find(params[:id])
+        @user_chains = @user.chains
     end
     
     def destroy

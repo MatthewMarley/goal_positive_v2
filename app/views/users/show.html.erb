@@ -1,1 +1,15 @@
-<h1 align="center">Show</h1>
+<h1 align="center">Welcome to <%= @user.username %>'s page</h1>
+
+<div class="row">
+    <% @user_chains.each do |chain| %>
+        <div class="col-md-1">
+            <div class="well">
+                <strong><%= chain.name %></strong> </br>
+                <%= chain.pledge %> </br>
+                    <%= link_to "Edit Chain", edit_chain_path(chain), class: 'btn btn-xs btn-primary' %>
+                    <%= link_to "Delete Chain", chain_path(chain), class: 'btn btn-xs btn-danger', 
+                        method: :delete, data: {confirm: "Are you sure?"} %>
+            </div>
+        </div>
+    <% end %>
+</div>
