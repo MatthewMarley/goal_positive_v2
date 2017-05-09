@@ -2,7 +2,8 @@ class ChainsController < ApplicationController
    before_action :require_user, except: [:index]
    
     def index
-        @chains = Chain.all
+        @chains = Chain.paginate(page: params[:page], per_page: 12)
+        # @users = User.paginate(page: params[:page], per_page: 5)
     end
     
     def new

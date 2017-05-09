@@ -28,6 +28,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Bootstrap for Sass gem, used for front-end UI and layout
 gem 'bootstrap-sass', '~> 3.3.7'
 
+# Gems for pagination
+gem 'will_paginate', '~> 3.1.0'
+gem 'bootstrap-will_paginate'
+
 # Use FontAwesome Sass gem for adding icons
 gem 'font-awesome-sass', '~> 4.7.0'
 

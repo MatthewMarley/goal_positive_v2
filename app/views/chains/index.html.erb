@@ -1,16 +1,21 @@
 <h1 align="center">All Chains</h1>
 
 <div class="row">
-    <% @chains.each do |chain| %>
-        <div class="col-md-1 text-center">
-            <div class="well">
-                <strong><%= chain.user.username %></strong>
-                </br>
-                <%= chain.name %>
-                </br>
-                <small><%= chain.pledge %></small>
+    <div align="center">
+        <%= will_paginate %>
+    </div>
+        <% @chains.each do |chain| %>
+            <div class="col-md-1 text-center">
+                <div class="well">
+                    <strong><%= chain.user.username %></strong>
+                    </br>
+                    <%= chain.name %>
+                    </br>
+                    <small><%= chain.pledge %></small>
+                </div>
             </div>
-        </div>
         <% end %>
+    <div align="center">
+        <%= will_paginate %>
     </div>
 </div>
