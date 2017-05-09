@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-   
+   before_action :require_admin, only: [:new, :create, :edit, :update, :destroy] 
    
    
     def index
@@ -31,6 +31,10 @@ class CategoriesController < ApplicationController
     
     def show
         @category = Category.find(params[:id])
+    end
+    
+    def destroy
+    
     end
 
 
