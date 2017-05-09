@@ -1,5 +1,5 @@
 <!-- chains_path is the url the form should be submitted to -->
-<%= form_for @chain, url: chains_path do |f| %>
+<%= form_for @chain do |f| %>
     <div class="form-group">
         <%= f.label :name %>
         <%= f.text_field :name, class:'form-control', placeholder: "Enter name of new chain" %>
@@ -8,6 +8,17 @@
         <%= f.label :pledge %>
         <%= f.text_area :pledge, class: 'form-control', placeholder: "Description" %>
     </div>
+    
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4">
+                <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+                <% end %>
+            </div>
+        </div>    
+    </div>
+    
     <div class="form-group">
         <%= f.submit "Create Chain", class: 'btn btn-primary' %>
     </div>

@@ -3,6 +3,7 @@ class ChainsController < ApplicationController
    
     def index
         @chains = Chain.paginate(page: params[:page], per_page: 12)
+        @chains_search = Chain.search(params[:search])
         # @users = User.paginate(page: params[:page], per_page: 5)
     end
     
@@ -25,11 +26,17 @@ class ChainsController < ApplicationController
     end
     
     def edit
-       
+        @chain = Chain.find(params[:id])
     end
     
     def update
-       
+        @chain = Chain.find(params[:id])
+        if @chain.update(chain_params)
+            flash[:success] = "Chain successfully updated!"
+            redirect_to user_path(current_user)
+        else
+            render 'edit'
+        end
     end
     
     def show
