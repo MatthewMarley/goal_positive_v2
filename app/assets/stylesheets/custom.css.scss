@@ -32,3 +32,19 @@
 table.table.table-striped tr.found td {
     background-color:#CECBCB;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle {
+    border: 2px solid white;
+    &:hover, &:focus {
+       background-color: #000066;
+        opacity: 0.65; 
+    }
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+}
